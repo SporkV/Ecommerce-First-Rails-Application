@@ -1,4 +1,11 @@
 FirstRailsApp::Application.routes.draw do
+  
+  # Assign a root route for the first controller's index action
+  # Rails convention. To the left of the # is the controller, to the right is the action
+  root :to => 'first#index'
+  
+  match 'about_us' => 'first#about', :via => :get, :as => "about_us"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
